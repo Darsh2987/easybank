@@ -17,6 +17,14 @@ a:hover {
   text-decoration: none;
 }
 
+// Spacing rules
+.container {
+  padding-top: 2.25rem;
+  padding-right: 1.5rem;
+  padding-bottom: 2.25rem;
+  padding-left: 1.5rem;
+}
+
 // Flexbox Rules
 .flex {
   display: flex;
@@ -34,9 +42,8 @@ a:hover {
   }
 }
 
-// Buttons
-button,
-.button {
+// CTA Button rules
+.button__cta {
   padding: 0.875rem 2.1875rem;
   border-radius: 50px;
   cursor: pointer;
@@ -44,19 +51,10 @@ button,
   border: none;
   color: $white;
   font-weight: 400;
-}
+  font-size: $font-sm;
+  transition: opacity 300ms ease-in-out;
 
-// Visibility
-.hide-for-mobile {
-  // hide for mobile and tablet
-  @include breakpoint-down(medium) {
-    display: none;
-  }
-}
-
-.hide-for-desktop {
-  // hide for desktop viewport
-  @include breakpoint-up(large) {
-    display: none;
+  &:hover {
+    opacity: 0.75;
   }
 }

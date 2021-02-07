@@ -1,3 +1,4 @@
+// Mobile screen styling rules
 .header {
   nav {
     padding: 1.0625rem 1.5rem;
@@ -11,8 +12,6 @@
   }
 
   &__hamburger {
-    //Mobile Menu
-
     span {
       display: block;
       width: 26px;
@@ -41,47 +40,57 @@
     }
   }
 
-  &__links {
-    a {
-      position: relative;
-      font-size: $font-sm;
-      color: $grayishBlue;
-      transition: color 300ms ease-in-out;
+  &__links,
+  .button__cta {
+    display: none;
+  }
+}
 
-      &:not(:last-child) {
-        margin-right: 2rem;
-      }
+// Medium screen size rules - 1000px
+@media (min-width: 1000px) {
+  .header {
+    &__hamburger {
+      display: none;
+    }
 
-      &::before {
-        content: "";
-        position: absolute;
-        display: block;
-        height: 5px;
-        background: linear-gradient(to right, $limeGreen, $brightCyan);
-        left: 0;
-        right: 0;
-        bottom: -30px;
-        opacity: 0;
-        transition: opacity 300ms ease-in-out;
-      }
+    &__links {
+      display: block;
 
-      &:hover {
-        color: $darkBlue;
+      a {
+        position: relative;
+        font-size: $font-sm;
+        color: $grayishBlue;
+        transition: color 300ms ease-in-out;
+
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
 
         &::before {
-          opacity: 1;
+          content: "";
+          position: absolute;
+          display: block;
+          height: 5px;
+          background: linear-gradient(to right, $limeGreen, $brightCyan);
+          left: 0;
+          right: 0;
+          bottom: -30px;
+          opacity: 0;
+          transition: opacity 300ms ease-in-out;
+        }
+
+        &:hover {
+          color: $darkBlue;
+
+          &::before {
+            opacity: 1;
+          }
         }
       }
     }
-  }
 
-  &__cta {
-    font-size: $font-sm;
-    color: $white;
-    transition: opacity 300ms ease-in-out;
-
-    &:hover {
-      opacity: 0.75;
+    .button__cta {
+      display: block;
     }
   }
 }
