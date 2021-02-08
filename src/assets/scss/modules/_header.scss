@@ -1,7 +1,7 @@
 // Mobile screen styling rules
 .header {
   nav {
-    padding: 1.0625rem 1.5rem;
+    padding: 1.0625rem 1rem;
   }
 
   &__logo {
@@ -43,6 +43,14 @@
   &__links,
   .button__cta {
     display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    nav {
+      padding: 1.0625rem 0rem;
+    }
   }
 }
 

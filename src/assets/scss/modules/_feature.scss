@@ -1,0 +1,52 @@
+.feature {
+  text-align: center;
+  background-color: #f4f5f7;
+
+  &__headline {
+    h1 {
+      font-size: 2rem;
+      padding-bottom: 1rem;
+    }
+
+    p {
+      font-size: $font-sm;
+    }
+  }
+
+  &__item {
+    padding-bottom: 2rem;
+
+    img {
+      padding-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      padding-bottom: 1rem;
+    }
+
+    p {
+      font-size: $font-sm;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .feature {
+    text-align: left;
+
+    &__headline {
+      p {
+        max-width: 50%;
+      }
+    }
+
+    &__items {
+      display: flex;
+    }
+
+    &__item:not(:last-child) {
+      padding-right: 3rem;
+    }
+  }
+}
