@@ -41,12 +41,14 @@
 
 @media (min-width: 1000px) {
   .footer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-      "logo links1 links2 cta"
-      "social links1 links2 copyright";
-    justify-items: start;
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas:
+        "logo links1 links2 cta"
+        "social links1 links2 copyright";
+      justify-items: start;
+    }
 
     &__logo {
       grid-area: logo;
