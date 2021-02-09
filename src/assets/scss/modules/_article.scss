@@ -11,6 +11,12 @@
   background-color: #ffffff;
   margin-bottom: 1rem;
   border-radius: 5px;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 150ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   &-image {
     background-size: cover;
