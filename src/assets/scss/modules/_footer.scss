@@ -11,6 +11,15 @@
   &__social-links {
     margin-bottom: 1.5rem;
 
+    a {
+      svg path {
+        transition: fill 150ms ease-in-out;
+      }
+      &:hover svg path {
+        fill: $limeGreen;
+      }
+    }
+
     a:not(:last-child) {
       margin-right: 1rem;
     }
@@ -21,6 +30,10 @@
     flex-direction: column;
     a {
       margin-bottom: 1rem;
+
+      &:hover {
+        color: $limeGreen;
+      }
     }
     &.col1 {
     }
