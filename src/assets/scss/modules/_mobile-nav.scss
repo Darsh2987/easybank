@@ -1,0 +1,28 @@
+@media (max-width: 1399px) {
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -20rem;
+    right: 0;
+    left: 0;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: rgba($darkBlue, 0.99);
+    padding-top: 2rem;
+    z-index: 10;
+    transition: all 400ms ease-in-out;
+
+    a {
+      padding-bottom: 2rem;
+      color: #fff;
+    }
+  }
+
+  .mobile-nav--animate {
+    top: 5rem;
+  }
+}
