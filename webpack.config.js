@@ -14,6 +14,9 @@ module.exports = {
   optimization: {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },
+  devServer: {
+    open: true,
+  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: "bundled-styles.css",
@@ -30,7 +33,11 @@ module.exports = {
     rules: [
       {
         test: /\.(s*)css$/i,
-        use: [MiniCssExtractPlugin.loader, { loader: "css-loader" }, { loader: "sass-loader" }],
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: "css-loader" },
+          { loader: "sass-loader" },
+        ],
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
