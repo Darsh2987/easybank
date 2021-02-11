@@ -1,23 +1,21 @@
 .hero {
-  &__image {
-    position: relative;
-    background-image: url("../../assets/images/bg-intro-mobile.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 17.5rem;
+  position: relative;
+  background-image: url("../../assets/images/bg-intro-mobile.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 17.5rem;
 
-    &::after {
-      content: "";
-      background-image: url("../../assets/images/image-mockups.png");
-      background-size: 93%;
-      background-position: center bottom;
-      background-repeat: no-repeat;
-      position: absolute;
-      height: 100%;
-      width: 100%;
-    }
-  }
+  // &::after {
+  //   content: "";
+  //   background-image: url("../../assets/images/image-mockups.png");
+  //   background-size: 93%;
+  //   background-position: center bottom;
+  //   background-repeat: no-repeat;
+  //   position: absolute;
+  //   height: 100%;
+  //   width: 100%;
+  // }
 
   &__text {
     text-align: center;
@@ -86,29 +84,23 @@
       align-items: center;
     }
 
-    &__image {
-      background-image: none;
-      flex: 3;
-      order: 2;
-      min-height: 100%;
+    background-image: none;
+    flex: 3;
+    order: 2;
+    min-height: 100%;
 
-      &::before {
-        content: "";
-        background-image: url("../../assets/images/bg-intro-desktop.svg");
-        background-size: 175%;
-        background-position: 13% 78%;
-        background-repeat: no-repeat;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-      }
+    content: "";
+    background-image: url("../../assets/images/image-mockups.png"),
+      url("../../assets/images/bg-intro-desktop.svg");
+    background-size: contain;
+    background-position: 124%;
+    background-repeat: no-repeat;
 
-      &::after {
-        width: 105%;
-        height: 124%;
-        background-size: 105%;
-        background-position: -171% 100%;
-      }
+    &::after {
+      width: 105%;
+      height: 124%;
+      background-size: 105%;
+      background-position: -171% 100%;
     }
 
     &__text {
